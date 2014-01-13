@@ -1,10 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Elevator\Lift.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scipts\StoneCollider.js">
     <Files>
-      <File FileName="Assets\Elevator\Lift.js" Line="9" Column="1" />
-      <File FileName="Assets\Scipts\ElevatorTrigger.js" Line="9" Column="41" />
-      <File FileName="Assets\Scipts\BoardRotate.js" Line="4" Column="38" />
+      <File FileName="Assets\Elevator\Lift.js" Line="17" Column="2" />
+      <File FileName="Assets\Scipts\ElevatorTrigger.js" Line="1" Column="1" />
+      <File FileName="Assets\Scipts\BoardRotate.js" Line="1" Column="1" />
+      <File FileName="Assets\Scipts\StoneCollider.js" Line="86" Column="21" />
+      <File FileName="Assets\WaterBomb.js" Line="26" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
