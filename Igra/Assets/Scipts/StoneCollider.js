@@ -57,8 +57,6 @@ function Update ()
 
 function OnTriggerEnter(myTrigger : Collider)
 {	
-	Debug.Log(myTrigger.gameObject.name);
-	
 	if(myTrigger.gameObject.name == "Water") 
 	{
 		inWater = true;
