@@ -1,11 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scipts\StoneCollider.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Elevator\Elevator.js">
     <Files>
       <File FileName="Assets\Elevator\Lift.js" Line="17" Column="2" />
-      <File FileName="Assets\Scipts\ElevatorTrigger.js" Line="1" Column="1" />
-      <File FileName="Assets\Scipts\BoardRotate.js" Line="1" Column="1" />
-      <File FileName="Assets\Scipts\StoneCollider.js" Line="19" Column="40" />
+      <File FileName="Assets\Elevator\Elevator.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
