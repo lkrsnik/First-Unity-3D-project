@@ -22,6 +22,6 @@ function OnMouseUp()
 	else if( isInstrButton || isBackButton )
 		GameObject.Find('MainBoard').SendMessage('instructionClicked', null);	
 	else if( isPlayButton )
-		;//go to level
+		Application.LoadLevel("Landscape");//go to level
 	
 }

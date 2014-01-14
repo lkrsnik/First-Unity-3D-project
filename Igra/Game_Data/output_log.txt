@@ -1,0 +1,21 @@
+Initialize engine version: 4.3.2f1 (0517a5ae8669)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [aticfx32.dll 8.17.10.1247]
+    Renderer: AMD Radeon HD 6400M Series
+    Vendor:   ATI
+    VRAM:     1015 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=1 INTZ=1 RAWZ=0 NULL=1 RESZ=1 SlowINTZ=1
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Sola\3.Letnik\RGTI\Igra - Unity - Git\Igra\Game_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Sola\3.Letnik\RGTI\Igra - Unity - Git\Igra\Game_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Sola\3.Letnik\RGTI\Igra - Unity - Git\Igra\Game_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\Sola\3.Letnik\RGTI\Igra - Unity - Git\Igra\Game_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Sola\3.Letnik\RGTI\Igra - Unity - Git\Igra\Game_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading D:\Sola\3.Letnik\RGTI\Igra - Unity - Git\Igra\Game_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Sola\3.Letnik\RGTI\Igra - Unity - Git\Igra\Game_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading D:\Sola\3.Letnik\RGTI\Igra - Unity - Git\Igra\Game_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.209 seconds
+desktop: 1440x900 60Hz; virtual: 3040x900 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
