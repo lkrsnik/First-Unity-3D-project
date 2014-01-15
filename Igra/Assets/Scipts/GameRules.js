@@ -13,12 +13,16 @@ private var waterLevel : float;
 private var isOver : boolean;
 private var isWon : boolean;
 private var camMouse : Component;
+private var kabum : boolean;
 //private var camMouse : Component;
+
+private var EndStr : String;
 
 function Start () {
 	waterLevel=GameObject.Find("Water").transform.position.y;
 	isOver=false;
 	isWon=false;
+	kabum=false;
 	Time.timeScale = 1;
 	camMouse = gameObject.Find("FPS_camera").GetComponent("MouseLook");
 }
@@ -34,6 +38,7 @@ function UpdateWaterCollision () {
 		//Screen.showCursor = true;
 		camMouse.active = false;
 		isOver = true;
+		EndStr = "You can not swim!";
 		if(isOver)
 			Time.timeScale = 0;
 		else
@@ -47,9 +52,21 @@ function UpdateTimer () {
 		//Screen.showCursor = true;
 		
 		msg=timer.ToString("F0");
+		
+		if( timer <= 1 && !kabum)
+		{
+			var gos: GameObject[];
+			gos = GameObject.FindGameObjectsWithTag("Bombs");
+			for(var i=0; i<gos.length; i++)
+				gos[i].SendMessage("kabum");
+			kabum = true;
+		}
+		
 	} else {
 		camMouse.active = false;
 		isOver = true;
+		EndStr = "Your time's up or you're dead!";
+		
 		if(isOver)
 			Time.timeScale = 0;
 		else
@@ -62,11 +79,6 @@ function OnGUI ()
 	var myStyle = GUIStyle();
 	myStyle.fontSize = 50;
 	myStyle.font = myFont;
-	
-	
-		
-	
-	
 			 
 	GUI.Label(Rect(	Screen.width - boxWidth
 				   ,1
@@ -74,21 +86,16 @@ function OnGUI ()
 				   ,boxHeight),
 			 msg, myStyle);
 			 
-			 
 	if(isOver){
 		if(isWon){
-			GUI.Label(Rect(	Screen.width/2 - menuWidth/2
-					   ,Screen.height/2 - menuHeight/2 -85
-					   ,menuWidth
-					   ,menuHeight),
-				 "You have won the game!", myStyle);
-		} else {
-			GUI.Label(Rect(	Screen.width/2 - menuWidth/2
-					   ,Screen.height/2 - menuHeight/2 -85
-					   ,menuWidth
-					   ,menuHeight),
-				 "Your time's up or you're dead!", myStyle);
+			EndStr =  "You have won the game!";	
 		}
+		GUI.Label(Rect(	Screen.width/2 - menuWidth/2
+					   ,Screen.height/2 - menuHeight/2 -85
+					   ,menuWidth
+					   ,menuHeight),
+				EndStr, myStyle);
+		
 		if(guiSkin != null)
     		GUI.skin = guiSkin;
 		GUI.Window(0, Rect(	Screen.width/2 - menuWidth/2

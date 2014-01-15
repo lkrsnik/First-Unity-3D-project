@@ -64,7 +64,7 @@ function OnTriggerEnter(myTrigger : Collider)
 		splash.transform.position = gameObject.transform.position;
 		splash.particleSystem.Play(true);
 	}
-	else if(myTrigger.gameObject.name == "FirstPersonController")
+	else if(myTrigger.gameObject.name == "First Person Controller")
 	{
 		inTrigger = true;
 	}	
@@ -72,7 +72,7 @@ function OnTriggerEnter(myTrigger : Collider)
 
 function OnTriggerExit(myTrigger : Collider)
 {
-	if(myTrigger.gameObject.name == "FirstPersonController")
+	if(myTrigger.gameObject.name == "First Person Controller")
 	{
 		inTrigger = false;
 		showText = false;
