@@ -35,7 +35,7 @@ function Update () {
 	UpdateTimer();
 	
 	if(isOver)
-		Time.timeScale *= 0.99;
+		Time.timeScale *= 0.99; //de se lepo ustavi
 	else
 		Time.timeScale = 1;
 }
@@ -56,7 +56,7 @@ function UpdateTimer () {
 		
 		msg=timer.ToString("F0");
 		
-		if( timer <= 0.25 && !kabum)
+		if( timer <= 0.25 && !kabum && !isWon)
 		{
 			var gos: GameObject[];
 			gos = GameObject.FindGameObjectsWithTag("Bombs");
@@ -77,7 +77,7 @@ function UpdateTimer () {
 function bombInDaWater()
 {
 	bombs_left -= 1;
-	if(bombs_left == 0)
+	if(bombs_left == 0 && !kabum)
 	{
 		camMouse.active = false;
 		isOver = true;

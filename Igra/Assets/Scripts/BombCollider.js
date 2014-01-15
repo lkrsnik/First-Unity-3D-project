@@ -10,7 +10,7 @@ var fps_camera : Camera;
 var water : GameObject;
 var fpc : GameObject;
 
-var bomb_image : Texture;
+var bomb_image : Texture2D;
 
 private var bomb : GameObject;
 private var inTrigger : boolean;
@@ -87,6 +87,5 @@ function OnGUI ()
 				 "(F) to pick up the bomb", myStyle);
 	
 	if( inHand )
-		GUI.DrawTexture(Rect(16,16,64,64), bomb_image, 1, false);
-	
+		GUI.DrawTexture(Rect(16,16,64,64), bomb_image);	
 }
