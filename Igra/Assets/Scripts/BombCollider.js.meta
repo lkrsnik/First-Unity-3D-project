@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9da2e27e59ef8ea438896b22faf09b2a
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - myFont: {instanceID: 0}
+  - splash: {instanceID: 0}
+  - fps_camera: {instanceID: 0}
+  - water: {instanceID: 0}
+  - fpc: {instanceID: 0}
+  - bomb_image: {fileID: 2800000, guid: 90aef92ed19601d43b51f2e0e7968d3f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
