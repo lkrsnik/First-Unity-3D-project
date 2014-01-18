@@ -15,7 +15,15 @@ Platform assembly: D:\Sola\3.Letnik\RGTI\Igra - Unity - Git\Igra\Game_Data\Manag
 Loading D:\Sola\3.Letnik\RGTI\Igra - Unity - Git\Igra\Game_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: D:\Sola\3.Letnik\RGTI\Igra - Unity - Git\Igra\Game_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading D:\Sola\3.Letnik\RGTI\Igra - Unity - Git\Igra\Game_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.209 seconds
-desktop: 1440x900 60Hz; virtual: 3040x900 at 0,0
+- Completed reload, in  0.241 seconds
+desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
+UnloadTime: 14.378757 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 4430.
+Total: 4.472478 ms (FindLiveObjects: 0.722225 ms CreateObjectMapping: 0.453481 ms MarkObjects: 1.222462 ms  DeleteObjects: 0.439797 ms)
+
+Platform assembly: D:\Sola\3.Letnik\RGTI\Igra - Unity - Git\Igra\Game_Data\Managed\Boo.Lang.dll (this message is harmless)
+Platform assembly: D:\Sola\3.Letnik\RGTI\Igra - Unity - Git\Igra\Game_Data\Managed\UnityScript.Lang.dll (this message is harmless)

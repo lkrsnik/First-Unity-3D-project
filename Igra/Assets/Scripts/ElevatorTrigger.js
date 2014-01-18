@@ -4,18 +4,33 @@ var myFont : Font;
 
 private var inTrigger : boolean = false;
 private var isMoving : boolean = false;
+private var elevHeight : float;
+private var humElevDifX : float;
+private var humElevDifY : float;
+private var humElevDifZ : float;
+private var human : GameObject;
+var elevator : GameObject;
+
+function Start ()
+{
+	human=GameObject.Find('First Person Controller');
+	
+}
 
 function Update () 
 {
 	if( inTrigger )
 		if( Input.GetKey("f") && !isMoving )
 		{
-			GameObject.Find('Elevator').SendMessage('startMoving', null);	
+			elevator.SendMessage('startMoving', null);	
 			isMoving = true;
 		}
 	
 	if( isMoving )
 	{
+		human.transform.position.x=elevator.transform.position.x+humElevDifX;
+		human.transform.position.y=elevator.transform.position.y+humElevDifY;
+		human.transform.position.z=elevator.transform.position.z+humElevDifZ;
 		if( !GameObject.Find('Elevator').animation.isPlaying )
 			isMoving = false;
 	}
@@ -23,6 +38,9 @@ function Update ()
 
 function OnTriggerEnter()
 {
+	humElevDifX=human.transform.position.x-elevator.transform.position.x;
+	humElevDifY=human.transform.position.y-elevator.transform.position.y;
+	humElevDifZ=human.transform.position.z-elevator.transform.position.z;
 	inTrigger = true;
 }
 
@@ -32,6 +50,8 @@ function OnTriggerExit()
 }
 
 function OnGUI () {
+		
+	
 	if (inTrigger && !isMoving)	
 	{
 		var myStyle = GUIStyle();

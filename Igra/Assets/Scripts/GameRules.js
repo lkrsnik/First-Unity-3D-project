@@ -3,7 +3,7 @@
 var boxWidth = 300;
 var boxHeight = 50;
 var menuWidth = 300;
-var menuHeight = 110;
+var menuHeight = 120;
 var myFont : Font;
 var timer : float = 10 ;
 var guiSkin : GUISkin;
@@ -12,6 +12,7 @@ private var msg : String;
 private var waterLevel : float;
 private var isOver : boolean;
 private var isWon : boolean;
+private var isPause :boolean;
 private var camMouse : Component;
 private var kabum : boolean;
 private var bombs_left : int;
@@ -23,11 +24,17 @@ function Start () {
 	waterLevel=GameObject.Find("Water").transform.position.y;
 	isOver=false;
 	isWon=false;
+	isPause = false;
 	kabum=false;
 	Time.timeScale = 1;
 	camMouse = gameObject.Find("FPS_camera").GetComponent("MouseLook");
 	
 	bombs_left = GameObject.FindGameObjectsWithTag("Bombs").Length;	
+}
+
+function setPause()
+{
+	isPause = !isPause; 
 }
 
 function Update () {
@@ -36,6 +43,8 @@ function Update () {
 	
 	if(isOver)
 		Time.timeScale *= 0.99; //de se lepo ustavi
+	else if(isPause)
+		Time.timeScale = 0;
 	else
 		Time.timeScale = 1;
 }
@@ -113,7 +122,7 @@ function OnGUI ()
 					   ,Screen.height/2 - menuHeight/2
 					   ,menuWidth
 					   ,menuHeight),
-					    TheMainMenu, "Pause Menu");
+					    TheMainMenu, "");
 	}
 	
 	var bl : String = "bombs left: " + bombs_left;

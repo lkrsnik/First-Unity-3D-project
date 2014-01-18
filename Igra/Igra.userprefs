@@ -1,11 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameRules.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js">
     <Files>
-      <File FileName="Assets\Scripts\PauseMenu.js" Line="23" Column="5" />
+      <File FileName="Assets\Elevator\Lift.js" Line="14" Column="7" />
       <File FileName="Assets\Scripts\QadScript.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameRules.js" Line="66" Column="4" />
-      <File FileName="Assets\Scripts\BombCollider.js" Line="31" Column="1" />
+      <File FileName="Assets\Scripts\PauseMenu.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameRules.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ElevatorTrigger.js" Line="47" Column="2" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

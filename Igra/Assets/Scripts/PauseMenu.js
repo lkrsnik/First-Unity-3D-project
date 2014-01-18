@@ -1,6 +1,6 @@
 ﻿#pragma strict
 var boxWidth = 300;
-var boxHeight = 130;
+var boxHeight = 145;
 var myFont : Font;
 
 var guiSkin : GUISkin;
@@ -19,21 +19,20 @@ function Start ()
 
 function Update () {
 	if (Input.GetKeyDown(KeyCode.Escape)){
+		gameObject.GetComponent(GameRules).setPause();
 		isPause = !isPause;
-		if(isPause)
-			Time.timeScale = 0;
-		else
-			Time.timeScale = 1;
-		
-
 	}
 }
 
 function OnGUI () 
 {
+	var myMenuStyle=GUIStyle();
+	myMenuStyle.fontSize = 12;
+	myMenuStyle.font = myFont;
 	var myStyle = GUIStyle();
 	myStyle.fontSize = 50;
 	myStyle.font = myFont;
+	GUI.skin.button.font = myFont;
 	
 	
 		
@@ -45,7 +44,7 @@ function OnGUI ()
 					   ,Screen.height/2 - boxHeight/2
 					   ,boxWidth
 					   ,boxHeight),
-					    TheMainMenu, "Pause Menu");
+					    TheMainMenu, "");
 	}
 		//GUI.Label(Rect(	Screen.width - boxWidth
 		//			   ,1
@@ -59,12 +58,14 @@ function TheMainMenu () {
 	if(GUILayout.Button("Resume")){
 		camMouse.active = true;
 		isPause = !isPause;
-		Time.timeScale = 1;
+		gameObject.GetComponent(GameRules).setPause();
+		//Time.timeScale = 1;
 	//Application.LoadLevel("MainMenu");
 	}
 	if(GUILayout.Button("Main menu")){
 		camMouse.active = true;
-		Time.timeScale = 1;
+		//Time.timeScale = 1;
+		gameObject.GetComponent(GameRules).setPause();
 		Application.LoadLevel("MainScreen");
 	}
 	if(GUILayout.Button("Restart")){
