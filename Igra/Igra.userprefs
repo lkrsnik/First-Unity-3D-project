@@ -1,4 +1,5 @@
 ﻿<Properties>
+<<<<<<< Updated upstream
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js">
     <Files>
@@ -8,6 +9,16 @@
       <File FileName="Assets\Scripts\GameRules.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ElevatorTrigger.js" Line="47" Column="2" />
       <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" Line="1" Column="1" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\QadScript.js">
+    <Files>
+      <File FileName="Assets\Scripts\BombCollider.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PauseMenu.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\QadScript.js" Line="70" Column="29" />
+      <File FileName="Assets\Scripts\GameRules.js" Line="57" Column="20" />
+      <File FileName="Assets\Scripts\BombCollider.js" Line="34" Column="1" />
+>>>>>>> Stashed changes
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

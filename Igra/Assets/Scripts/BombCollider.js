@@ -87,5 +87,5 @@ function OnGUI ()
 				 "(F) to pick up the bomb", myStyle);
 	
 	if( inHand )
-		GUI.DrawTexture(Rect(16,16,64,64), bomb_image);	
+		GUI.DrawTexture(Rect(16,16,128,128), bomb_image);	
 }
