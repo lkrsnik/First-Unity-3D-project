@@ -1,6 +1,4 @@
-﻿#pragma strict
-
-// air resistence
+﻿// air resistence
 var ar_Linear : float;
 var ar_Square : float;
 var ar_LinearBoundary : float;
@@ -10,31 +8,19 @@ var maxRotXZ : float;
 var maxForce : float;
 
 var toReach : GameObject;
+private var quad_camera_transform : Transform;
 
 private var t : float = 0;
 
-var fps_camera : Camera;
-var quad_camera : Camera;
+function Start()
+{
+	quad_camera_transform = transform.FindChild("QuadCamera");
+}
 
 function Update () 
 {
-	directPointReach();
-	quad_camera.transform.LookAt(toReach.transform.position);
-	
-	if(Input.GetKeyUp("c"))
-	{
-		if(quad_camera.enabled)
-		{
-			quad_camera.enabled = false;
-			fps_camera.enabled = true;
-		}
-		else
-		{
-			fps_camera.enabled = false;
-			quad_camera.enabled = true;			
-		}
-	}
-	
+	directPointReach();	
+	quad_camera_transform.LookAt(toReach.transform.position);
 }
 
 /*** REALISTIC QUADROCOPETR MANUVERING ***/
@@ -106,11 +92,3 @@ function directPointReach()
 	var force_quad : Vector3 = p_factor+i_factor+d_factor;
 	ApplyForces(force_quad);
 }
-
-
-
-
-
-
-
-

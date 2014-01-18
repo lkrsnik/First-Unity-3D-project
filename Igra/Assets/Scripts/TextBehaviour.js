@@ -1,6 +1,4 @@
-﻿#pragma strict
-
-var isQuitButton : boolean = false;
+﻿var isQuitButton : boolean = false;
 var isInstrButton : boolean = false;
 var isPlayButton : boolean = false;
 var isBackButton : boolean = false;

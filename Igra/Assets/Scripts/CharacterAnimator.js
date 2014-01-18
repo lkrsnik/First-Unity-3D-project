@@ -1,13 +1,11 @@
-﻿#pragma strict
-
-private var scrpt : CharacterMotor;
+﻿private var scrpt : CharacterMotor;
 
 private var walk : boolean;
 private var jump : boolean;
 
 function Start()
 {
-	scrpt = GameObject.Find("First Person Controller").GetComponent(CharacterMotor);
+	scrpt = transform.parent.gameObject.GetComponent(CharacterMotor);
 	
 	walk = false;
 	jump = false;

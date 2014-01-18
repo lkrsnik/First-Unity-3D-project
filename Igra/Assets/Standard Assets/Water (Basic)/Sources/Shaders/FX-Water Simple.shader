@@ -57,7 +57,9 @@ ENDCG
 // Fragment program
 
 Subshader {
-	Tags { "RenderType"="Opaque" }
+	Tags { "RenderType" = "Transparent" }
+	Blend SrcAlpha OneMinusSrcAlpha
+	ColorMask RGB 
 	Pass {
 
 CGPROGRAM

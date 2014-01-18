@@ -8,14 +8,9 @@ private var elevHeight : float;
 private var humElevDifX : float;
 private var humElevDifY : float;
 private var humElevDifZ : float;
-private var human : GameObject;
-var elevator : GameObject;
 
-function Start ()
-{
-	human=GameObject.Find('First Person Controller');
-	
-}
+var human : GameObject;
+var elevator : GameObject;
 
 function Update () 
 {

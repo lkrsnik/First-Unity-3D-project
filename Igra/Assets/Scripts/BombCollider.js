@@ -1,91 +1,86 @@
-﻿var boxWidth = 300;
-var boxHeight = 50;
-var myFont : Font;
-
-var throwForce : float;
-var Kr : float;
-
-var splash : GameObject;
+﻿var splash : GameObject;
 var fps_camera : Camera;
 var water : GameObject;
 var fpc : GameObject;
-
 var bomb_image : Texture2D;
+var Kr : float;
+var throwForce : float;
 
+private var trigger : GameObject;
 private var bomb : GameObject;
 private var inTrigger : boolean;
 private var inHand : boolean;
 private var inWater : boolean;
 
-function Start () {
-	gameObject.renderer.enabled = false;
-	splash.particleSystem.Stop(true);
-	bomb = gameObject.transform.parent.gameObject;
+
+function Start () 
+{
+	for(var child in transform)
+		if(child.gameObject.name == "BombCollider")
+		{
+			trigger = child.gameObject;
+			break;
+		}
 	
 	inTrigger = false;
 	inHand = false;
 	inWater = false;
 }
 
-
-
 function Update () 
 {
 	if( !inHand && inTrigger && Input.GetKeyUp("f"))
 	{		
-			bomb.renderer.enabled = false;
-			inHand = true;
+			renderer.enabled = false;
+			SetInHand(true);
 	}
 	
 	if( inHand && Input.GetMouseButtonUp(0) )
 	{
-		bomb.renderer.enabled = true;
-		bomb.transform.position = fps_camera.transform.position;
-		bomb.rigidbody.AddForce(fps_camera.transform.forward * throwForce);
+		renderer.enabled = true;
+		transform.position = fps_camera.transform.position;
+		rigidbody.AddForce(fps_camera.transform.forward * throwForce);
 		
-		inHand = false;
-		inTrigger = false;		
+		SetInHand(false);
+		SetInTrigger(false);
 	}
 	
 	if(inWater)
-		bomb.rigidbody.AddForce(-bomb.rigidbody.velocity*Kr);	
+		rigidbody.AddForce(-rigidbody.velocity*Kr);	
 }
 
 function OnTriggerEnter(myTrigger : Collider)
-{	
-	if(myTrigger.gameObject == water) 
+{
+	if(myTrigger.gameObject == water && inWater != true) 
 	{
 		inWater = true;
 		fpc.SendMessage("bombInDaWater");
+		transform.parent.gameObject.SendMessage("SetInWater", gameObject);
 		
 		splash.transform.position = gameObject.transform.position;
 		splash.particleSystem.Play(true);
+		
 	}
 	else if(myTrigger.gameObject == fpc)
 	{
-		inTrigger = true;
+		SetInTrigger(true);
 	}	
+}
+
+function SetInHand(bool : boolean)
+{
+	inHand = bool;
+	transform.parent.gameObject.SendMessage("SetInHand", bool);
+}
+
+function SetInTrigger(bool: boolean)
+{
+	inTrigger = bool;
+	transform.parent.gameObject.SendMessage("SetInTrigger", bool);
 }
 
 function OnTriggerExit(myTrigger : Collider)
 {	
 	if(myTrigger.gameObject == fpc)
-		inTrigger = false;
-}
-
-function OnGUI () 
-{	
-	var myStyle = GUIStyle();
-	myStyle.fontSize = 50;
-	myStyle.font = myFont;
-	
-	if( !inHand && inTrigger )	
-		GUI.Label(Rect(	Screen.width/2 - boxWidth/2
-					   ,Screen.height/2 - boxHeight/2
-					   ,boxWidth
-					   ,boxHeight),
-				 "(F) to pick up the bomb", myStyle);
-	
-	if( inHand )
-		GUI.DrawTexture(Rect(16,16,128,128), bomb_image);	
+		SetInTrigger(false);
 }

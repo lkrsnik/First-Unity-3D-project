@@ -1,10 +1,9 @@
-﻿#pragma strict
-
-private var clicked : boolean = false;
+﻿private var clicked : boolean = false;
 private var turned : boolean = false;
 
 function Start () 
 {
+	Time.timeScale = 1;
 	animation.Stop("animF");
 	
 	var instr: GameObject = GameObject.Find("InstrLong");
